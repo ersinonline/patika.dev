@@ -1,0 +1,91 @@
+Proje 3 - Binary Search Tree (BST) Aşamaları
+Verilen dizi: [7, 5, 1, 8, 3, 6, 0, 9, 4, 2]
+
+Binary Search Tree Aşamaları:
+1. Adım: Root Elemanı Seçme
+
+İlk eleman olan 7 dizideki ilk eleman olarak root (kök) düğümüne yerleştirilir.
+Root: 7
+2. Adım: 5 Ekleniyor
+
+5, root olan 7'den küçük olduğu için 7'nin soluna eklenir.
+Root: 7
+Solunda: 5
+3. Adım: 1 Ekleniyor
+
+1, 7'den küçük ve 5'ten de küçük olduğu için 5'in soluna eklenir.
+Root: 7
+Solunda: 5
+Solunda: 1
+4. Adım: 8 Ekleniyor
+
+8, 7'den büyük olduğu için 7'nin sağına eklenir.
+Root: 7
+Sağında: 8
+5. Adım: 3 Ekleniyor
+
+3, 7'den küçük ve 5'ten küçük ama 1'den büyük olduğu için 1'in sağına eklenir.
+Root: 7
+Solunda: 5
+Solunda: 1
+Sağında: 3
+6. Adım: 6 Ekleniyor
+
+6, 7'den küçük ve 5'ten büyük olduğu için 5'in sağına eklenir.
+Root: 7
+Solunda: 5
+Sağında: 6
+Solunda: 1
+Sağında: 3
+7. Adım: 0 Ekleniyor
+
+0, 7'den küçük, 5'ten küçük ve 1'den küçük olduğu için 1'in soluna eklenir.
+Root: 7
+Solunda: 5
+Solunda: 1
+Solunda: 0
+Sağında: 3
+Sağında: 6
+8. Adım: 9 Ekleniyor
+
+9, 7'den büyük ve 8'den de büyük olduğu için 8'in sağına eklenir.
+Root: 7
+Sağında: 8
+Sağında: 9
+9. Adım: 4 Ekleniyor
+
+4, 7'den küçük, 5'ten küçük ama 3'ten büyük olduğu için 3'ün sağına eklenir.
+Root: 7
+Solunda: 5
+Solunda: 1
+Solunda: 0
+Sağında: 3
+Sağında: 6
+Sağında: 4
+Sağında: 8
+Sağında: 9
+10. Adım: 2 Ekleniyor
+
+2, 7'den küçük, 5'ten küçük, 1'den büyük ve 3'ten küçük olduğu için 3'ün soluna eklenir.
+Root: 7
+Solunda: 5
+Solunda: 1
+Solunda: 0
+Sağında: 3
+Solunda: 2
+Sağında: 6
+Sağında: 4
+Sağında: 8
+Sağında: 9
+
+
+
+        7
+       / \
+      5   8
+     / \   \
+    1   6   9
+   / \   \
+  0   3   4
+     / \
+    2
