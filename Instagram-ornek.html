@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Genel Stil */
+    body {
+      background-color: #fafafa;
+      padding-top: 54px; /* Navbar ile içerik arasındaki boşluk */
+    }
+    .navbar {
+      height: 54px;
+    }
+    /* Placeholder Arka Plan */
+    input::placeholder {
+      background-image: url('assets/search-icon.png');
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+    /* Hikaye Resimleri */
+    .story img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+    }
+    .story p {
+      text-align: center;
+    }
+    /* İçerik Alanı */
+    .middlearea {
+      max-height: 200px !important;
+    }
+    /* Card Header ve Footer */
+    .card-header, .card-footer {
+      background-color: white;
+    }
+    /* Sticky Sidebar */
+    .rightpanel {
+      background-color: white;
+      border: none;
+    }
+    .sticky-top {
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-5" href="#">Instagram</a>
+      <form class="d-flex ms-5">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <div class="d-flex align-items-center">
+        <i class="fas fa-home me-3"></i>
+        <i class="fas fa-search me-3"></i>
+        <i class="fas fa-plus-circle me-3"></i>
+        <i class="fas fa-heart me-3"></i>
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- İçerik Alanı -->
+  <div class="container mt-2">
+    <div class="row">
+      <!-- Sol Panel: Hikayeler -->
+      <div class="col-md-4 d-none d-md-block">
+        <div class="d-flex flex-column">
+          <div class="story">
+            <img src="user1.jpg" class="rounded-circle" alt="User 1">
+            <p>User 1</p>
+          </div>
+          <div class="story">
+            <img src="user2.jpg" class="rounded-circle" alt="User 2">
+            <p>User 2</p>
+          </div>
+          <!-- Diğer kullanıcı hikayeleri buraya eklenebilir -->
+        </div>
+      </div>
+
+      <!-- Ortadaki Gönderiler -->
+      <div class="col-md-12 col-lg-6 offset-lg-4 mt-2">
+        <div class="card">
+          <img src="post1.jpg" class="card-img-top" alt="Post 1">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-comment"></i>
+              <i class="fas fa-share"></i>
+            </div>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+          </div>
+          <div class="card-footer bg-white">
+            <small class="text-muted">Yorumlar</small>
+          </div>
+        </div>
+        <!-- Diğer gönderiler buraya eklenebilir -->
+      </div>
+
+      <!-- Sağ Panel -->
+      <div class="col-md-4 rightpanel sticky-top">
+        <div class="card">
+          <img src="user3.jpg" class="card-img-top" alt="User 3">
+          <div class="card-body">
+            <p class="card-text">User 3</p>
+          </div>
+        </div>
+        <!-- Diğer sağ panel içeriği buraya eklenebilir -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
